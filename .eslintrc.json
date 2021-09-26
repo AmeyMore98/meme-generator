@@ -1,0 +1,19 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true,
+        "jasmine": true
+    },
+    "extends": "strongloop",
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "double"],
+        "max-len": ["warn", 100],
+        "comma-dangle": ["error", "never"],
+        "no-unused-vars": ["warn"]
+    }
+}
