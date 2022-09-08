@@ -33,6 +33,17 @@ const conf = convict({
             env: "LOGGER_LEVEL",
             arg: "logger_level"
         }
+    },
+
+    // DBs
+    postgres: {
+        meme: {
+            doc: "postgresql url of service's DB",
+            format: String,
+            default: null,
+            env: "POSTGRES_MEME_READ_WRITE",
+            arg: "postgres_meme_read_write"
+        }
     }
 });
 

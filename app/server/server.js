@@ -5,6 +5,7 @@ const createError = require("http-errors");
 
 const logger = require("../../logger");
 const conf = require("../../config");
+const v1Router = require("./routes/v1.0");
 
 const app = express();
 
@@ -15,6 +16,8 @@ const checkHealth = (_req, res) => {
 app.get("/_readyz", checkHealth);
 
 app.use(express.json());
+
+app.use("/v1.0", v1Router);
 
 app.use((req, res, next) => {
     let err = createError(404);
